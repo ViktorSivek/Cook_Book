@@ -145,10 +145,13 @@
 									<ul class="photos">
 					
 										{% for post in user_posts %}
-										<li>
-											<a class="strip" href="{{post.image.url}}" title="" data-strip-group="mygroup" data-strip-group-options="loop: false">
-												<img src="{{post.image.url}}" style="height: 250px; width: 300px;" alt=""></a>
-										</li>
+											{% if post.image.url != 0 %}
+											<li>
+												<a class="strip" href="{{ post.image.url|default_if_none:'#' }}" title="" data-strip-group="mygroup" data-strip-group-options="loop: false">
+													<img src="{{post.image.url|default_if_none:'#'}}" style="height: 250px; width: 300px;" alt=""></a>
+											</li>
+
+											{% endif %}
 										{% endfor %}
 																				
 									</ul>
