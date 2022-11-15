@@ -568,7 +568,7 @@ textarea {
   height: auto;
   line-height: 27px;
   padding: 20px;
-  min-height: 130px;
+  min-height: 300px;
   -webkit-transition: none !important;
   transition: none !important;
   min-width: 100%;
